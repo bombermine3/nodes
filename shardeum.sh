@@ -26,12 +26,12 @@ install)
 	curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh && chmod +x installer.sh && ./installer.sh
 
 	cd $HOME/.shardeum
-;;
+	;;
 uninstall)
 	cd $HOME/.shardeum
 	./cleanup.sh
 	cd $HOME
 	rm -rf .shardeum
 	rm installer.sh
-;;
+	;;
 esac
