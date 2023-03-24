@@ -27,7 +27,7 @@ install)
 	curl -O https://gitlab.com/shardeum/validator/dashboard/-/raw/main/installer.sh && chmod +x installer.sh && ./installer.sh
 
 	cd $HOME/.shardeum
-	wget -qO https://raw.githubusercontent.com/bombermine3/nodes/main/shardeum/watchdog.sh
+	wget -q -O watchdog.sh https://raw.githubusercontent.com/bombermine3/nodes/main/shardeum/watchdog.sh
 	chmod +x watchdog.sh
 	;;
 uninstall)
