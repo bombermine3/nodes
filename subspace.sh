@@ -22,7 +22,12 @@ sudo apt -qq update
 sudo apt -qq -y upgrade
 sudo apt -y install wget
 
-sudo wget -O /usr/local/bin/subspace https://github.com/subspace/subspace-cli/releases/download/v0.3.3-alpha/subspace-cli-ubuntu-x86_64-v3-v0.3.3-alpha
+BIN_FILE="https://github.com/subspace/subspace-cli/releases/download/v0.3.3-alpha/subspace-cli-ubuntu-x86_64-v3-v0.3.3-alpha"
+
+if [[ $1 == "v2" ]]; then
+    BIN_FILE="https://github.com/subspace/subspace-cli/releases/download/v0.3.3-alpha/subspace-cli-ubuntu-x86_64-v2-v0.3.3-alpha"
+fi
+sudo wget -O /usr/local/bin/subspace $BIN_FILE
 sudo chmod +x /usr/local/bin/subspace
 
 printf "${GREEN}Настройка параметров${NC}\n"
