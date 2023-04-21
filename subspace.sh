@@ -43,7 +43,7 @@ User=$USER
 ExecStart=/usr/local/bin/subspace farm --verbose
 Restart=on-failure
 RestartSec=10
-LimitNOFILE=65535
+LimitNOFILE=1048576
 [Install]
 WantedBy=multi-user.target" | sudo tee /etc/systemd/system/subspace-node.service > /dev/null
 
